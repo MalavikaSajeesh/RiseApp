@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroupDays"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleLine="false"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSun" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Sun" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipMon" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Mon" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipTue" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Tue" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipWed" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Wed" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipThu" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Thu" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipFri" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Fri" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipSat" style="@style/Widget.MaterialComponents.Chip.Filter" android:text="Sat" android:checkable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <EditText
+        android:id="@+id/editLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Label (optional)"
+        android:layout_marginTop="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkVibrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vibrate"
+        android:checked="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sound"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSoundMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioSpecificSound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_ringtone"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radioRandomPool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/use_random_pool" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonPickRingtone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose sound…"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/buttonManagePool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_pool"
+        android:visibility="gone"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/textRingVolumeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/ring_volume" />
+
+    <SeekBar
+        android:id="@+id/seekRingVolume"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/primary_goal"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonPickPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose primary challenge" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/secondary_goal"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonPickSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose backup challenge (optional)" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:visibility="gone"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
+</ScrollView>

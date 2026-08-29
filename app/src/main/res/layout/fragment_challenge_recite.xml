@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textTarget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginBottom="16dp"
+        tools:text="Recite: ..."
+        xmlns:tools="http://schemas.android.com/tools" />
+
+    <TextView
+        android:id="@+id/textHeard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/teal_200"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonSpeak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tap and recite" />
+</LinearLayout>

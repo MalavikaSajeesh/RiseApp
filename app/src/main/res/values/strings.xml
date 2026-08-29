@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Rise</string>
+    <string name="add_alarm">Add Alarm</string>
+    <string name="manage_goals">Manage Challenges</string>
+    <string name="primary_goal">Primary challenge</string>
+    <string name="secondary_goal">Backup challenge</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="new_goal">New Challenge</string>
+    <string name="take_reference_photo">Take reference photo</string>
+    <string name="retake">Retake</string>
+    <string name="verify">Verify</string>
+    <string name="switch_backup">Switch to backup challenge</string>
+    <string name="no_match_try_again">Doesn\'t look like a match yet. Try again.</string>
+    <string name="too_blurry">That photo is too blurry — hold steady and retake.</string>
+    <string name="success">Nice — alarm dismissed!</string>
+    <string name="music_pool">Music Pool</string>
+    <string name="music_pool_empty">No songs yet. Tap + to add tracks from your device — the alarm will play a random one each time it fires.</string>
+    <string name="add_song">Add song</string>
+    <string name="sound">Alarm sound</string>
+    <string name="pick_ringtone">Pick a specific sound</string>
+    <string name="use_random_pool">Play a random song from my pool</string>
+    <string name="manage_pool">Manage music pool</string>
+    <string name="ring_volume">Ring volume</string>
+</resources>

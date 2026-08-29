@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Challenge name (e.g. Balcony photo)" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- PHOTO section -->
+    <LinearLayout
+        android:id="@+id/sectionPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editPhotoPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="What should the photo show? e.g. 'The road from the balcony'"
+            android:layout_marginTop="12dp" />
+
+        <ImageView
+            android:id="@+id/imageReferencePreview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            android:background="#DDDDDD"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/buttonTakeReference"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/take_reference_photo"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Match strictness"
+            android:layout_marginTop="12dp" />
+
+        <SeekBar
+            android:id="@+id/seekPhotoStrictness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="40" />
+    </LinearLayout>
+
+    <!-- STEPS section -->
+    <LinearLayout
+        android:id="@+id/sectionSteps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textStepsValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="Target: 30 steps"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <SeekBar
+            android:id="@+id/seekSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100" />
+    </LinearLayout>
+
+    <!-- JUMPING JACKS section -->
+    <LinearLayout
+        android:id="@+id/sectionJumpingJacks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textJJValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="Target: 15 reps"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <SeekBar
+            android:id="@+id/seekJJ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="50" />
+    </LinearLayout>
+
+    <!-- RECITE section -->
+    <LinearLayout
+        android:id="@+id/sectionRecite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editVerseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Text to recite"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+
+    <!-- MATH section -->
+    <LinearLayout
+        android:id="@+id/sectionMath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficulty"
+            android:layout_marginTop="12dp" />
+
+        <Spinner
+            android:id="@+id/spinnerDifficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/textProblemCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="3 problems"
+            xmlns:tools="http://schemas.android.com/tools" />
+
+        <SeekBar
+            android:id="@+id/seekProblemCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="9" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSaveGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginTop="24dp" />
+
+    <Button
+        android:id="@+id/buttonDeleteGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:visibility="gone"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
+</ScrollView>

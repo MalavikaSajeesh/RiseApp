@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.WakeChallenge" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+    </style>
+
+    <style name="Theme.WakeChallenge.Ring" parent="Theme.WakeChallenge">
+        <item name="android:windowBackground">@color/ring_bg</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
