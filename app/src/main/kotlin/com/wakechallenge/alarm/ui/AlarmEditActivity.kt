@@ -16,6 +16,7 @@ import com.wakechallenge.alarm.data.AppDatabase
 import com.wakechallenge.alarm.data.GoalEntity
 import com.wakechallenge.alarm.data.SoundMode
 import com.wakechallenge.alarm.databinding.ActivityAlarmEditBinding
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
@@ -97,9 +98,7 @@ class AlarmEditActivity : AppCompatActivity() {
     private fun loadData() {
         lifecycleScope.launch {
             val db = AppDatabase.get(applicationContext)
-            allGoals = db.goalDao().observeAll().let { flow ->
-                kotlinx.coroutines.flow.first(flow)
-            }
+            allGoals = db.goalDao().observeAll().first()
 
             if (alarmId != -1L) {
                 existingAlarm = db.alarmDao().getById(alarmId)
